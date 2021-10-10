@@ -32,10 +32,12 @@
 				slides: [], //轮播图数据
 				goodsList: [], //首页商品列表数据
 				page: 1, //当前页
-				loading: false
+				loading: false,
+				
 			}
 		},
-		onLoad() {
+		onLoad(option) {
+			
 			// 获取首页数据
 			this.getData()
 		},

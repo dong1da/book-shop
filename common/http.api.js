@@ -12,9 +12,22 @@ const install = (Vue, vm) => {
 	// 认证相关
 	vm.$u.api.authLogin = params => vm.$u.post('/api/auth/login', params);	//登录
 	vm.$u.api.authRegister = params => vm.$u.post('/api/auth/register', params);	//注册
+	vm.$u.api.authLoginOut = () => vm.$u.post('/api/auth/logout');	//退出登录
+	vm.$u.api.authOssToken = () => vm.$u.get('/api/auth/oss/token');	//获取oss token
+	
+	// 商品相关的
+	vm.$u.api.getGoods = id => vm.$u.get(`/api/goods/${id}`) // 商品详情数据
+	vm.$u.api.Collects = id => vm.$u.post(`/api/collects/goods/${id}`) // 商品收藏
+	vm.$u.api.goodsList = (params) => vm.$u.get('/api/goods',params); // 商品分类
 	
 	// 用户相关的
 	vm.$u.api.userInfo = () => vm.$u.get('/api/user')  //用户详情
+	vm.$u.api.userInfoUpdate = params => vm.$u.put('/api/user', params)  //修改用户信息更新昵称
+	vm.$u.api.userAvatar = params => vm.$u.patch('/api/user/avatar', params)  //修改用户信息更新头像
+	
+	// 购物车相关的
+	vm.$u.api.carts = (params) => vm.$u.post('/api/carts',params); // 添加到购物车
+	vm.$u.api.cartsList = () => vm.$u.get('/api/carts'); // 请求到购物车 
 	
 	// 订单相关的
 	
