@@ -64,7 +64,16 @@
             "path" : "pages/goods/show",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "商品详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cart/order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单预览",
                 "enablePullDownRefresh": false
             }
             
