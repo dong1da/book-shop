@@ -140,7 +140,7 @@
 				const params = {
 					goods_id:this.goodsId
 				}
-				await this.$u.api.carts(params)
+				await this.$u.api.cartsAdd(params)
 				// 提示消息
 				this.$u.toast('添加成功！')
 				// 调用购物车数量函数
@@ -148,9 +148,11 @@
 			},
 			// 获取购物车数量的事件
 			async getCartCount(){
+				//如果存在token，即必须在登录情况下才能进入购物车
 				const token = this.vuex_token
 				if(token){
 					const res = await this.$u.api.cartsList()
+					// console.log(res)
 					this.cartCount = res.data.length
 				}
 			},

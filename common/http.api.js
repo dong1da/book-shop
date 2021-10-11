@@ -26,7 +26,7 @@ const install = (Vue, vm) => {
 	vm.$u.api.userAvatar = params => vm.$u.patch('/api/user/avatar', params)  //修改用户信息更新头像
 	
 	// 购物车相关的
-	vm.$u.api.carts = (params) => vm.$u.post('/api/carts',params); // 添加到购物车
+	vm.$u.api.cartsAdd = (params) => vm.$u.post('/api/carts',params); // 添加到购物车
 	vm.$u.api.cartsList = () => vm.$u.get('/api/carts'); // 请求到购物车 
 	
 	// 订单相关的
