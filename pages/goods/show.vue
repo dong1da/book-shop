@@ -138,9 +138,9 @@
 			// 点击加入购物车事件
 			async addCart(){
 				const params = {
-					goods_id:this.goodsId
+					goods_id: this.goodsId
 				}
-				await this.$u.api.cartsAdd(params)
+			  await	this.$u.api.cartsAdd(params)
 				// 提示消息
 				this.$u.toast('添加成功！')
 				// 调用购物车数量函数

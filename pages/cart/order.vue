@@ -97,11 +97,11 @@ page {
 	padding-left: 20rpx;
 	.dizhi_dizhi {
 		font-size: 28rpx;
-		padding-top: 20rpx;
+		padding: 10rpx;
 		font-weight: 600;
 	}
 	.Telephone {
-		padding-top: 20rpx;
+		padding: 10rpx;
 		color: #9e9e9e;
 		span{
 			margin-left: 20rpx;

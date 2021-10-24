@@ -21,9 +21,9 @@
 		
 		<view class="u-m-t-20">
 			<u-cell-group>
-				<u-cell-item icon="rmb-circle" title="个人订单"></u-cell-item>
+				<u-cell-item icon="rmb-circle" title="个人订单" @click="toOrder"></u-cell-item>
 				<u-cell-item icon="star" title="商品收藏"></u-cell-item>
-				<u-cell-item icon="map" title="收货地址"></u-cell-item>
+				<u-cell-item icon="map" title="收货地址" @click="toAddress"></u-cell-item>
 				
 			</u-cell-group>
 		</view>
@@ -72,6 +72,18 @@
 						url: 'pages/index/index'
 					})
 				}, 1500)
+			},
+			// 跳转至我的订单
+			toOrder() {
+				this.$u.route({
+					url: 'pages/order/orderList'
+				})
+			},
+			// 跳转至地址管理
+			toAddress() {
+				this.$u.route({
+					url: 'pages/address/address'
+				})
 			}
 		}
 	}
